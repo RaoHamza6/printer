@@ -468,8 +468,6 @@ body {
         page-break-after: auto;
     }
 
-
-
     .card-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -484,7 +482,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px dashed #ccc;
         border-radius: 4mm;
         overflow: hidden;
         background: #f9f9f9;
