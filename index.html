@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional ID Card Printing System - Upload and print ID cards with ease">
+    <title>ID Card Print Studio | Professional Printing Solution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main Interface (Screen View) -->
+    <div id="app-interface" class="app-interface">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="url(#gradient)" />
+                        <path
+                            d="M16 8C12.686 8 10 10.686 10 14V18C10 21.314 12.686 24 16 24C19.314 24 22 21.314 22 18V14C22 10.686 19.314 8 16 8Z"
+                            fill="white" />
+                        <circle cx="16" cy="13" r="2" fill="url(#gradient)" />
+                        <path d="M12 19C12 17.343 13.791 16 16 16C18.209 16 20 17.343 20 19V20H12V19Z"
+                            fill="url(#gradient)" />
+                        <defs>
+                            <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" style="stop-color:#667eea" />
+                                <stop offset="100%" style="stop-color:#764ba2" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <h1>ID Card Print Studio</h1>
+                </div>
+                <p class="tagline">Professional Printing Solution</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <h2>Upload ID Card Images</h2>
+                <p class="section-description">Upload front and back images of your ID card. The system will
+                    automatically arrange 8 cards per page for optimal printing.</p>
+
+                <div class="upload-grid">
+                    <!-- Front Image Upload -->
+                    <div class="upload-card">
+                        <div class="upload-header">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <circle cx="8.5" cy="8.5" r="1.5" />
+                                <path d="M21 15l-5-5L5 21" />
+                            </svg>
+                            <h3>Front Side</h3>
+                        </div>
+                        <div class="upload-area" id="frontUploadArea">
+                            <input type="file" id="frontImageInput" accept="image/*" hidden>
+                            <label for="frontImageInput" class="upload-label">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" y1="3" x2="12" y2="15" />
+                                </svg>
+                                <span class="upload-text">Click to upload or drag & drop</span>
+                                <span class="upload-hint">PNG, JPG up to 10MB</span>
+                            </label>
+                            <div class="preview-container" id="frontPreview" style="display: none;">
+                                <img id="frontPreviewImg" alt="Front preview">
+                                <button class="remove-btn" id="removeFrontBtn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18" />
+                                        <line x1="6" y1="6" x2="18" y2="18" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Back Image Upload -->
+                    <div class="upload-card">
+                        <div class="upload-header">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <line x1="3" y1="9" x2="21" y2="9" />
+                                <line x1="7" y1="13" x2="17" y2="13" />
+                                <line x1="7" y1="17" x2="13" y2="17" />
+                            </svg>
+                            <h3>Back Side</h3>
+                        </div>
+                        <div class="upload-area" id="backUploadArea">
+                            <input type="file" id="backImageInput" accept="image/*" hidden>
+                            <label for="backImageInput" class="upload-label">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" y1="3" x2="12" y2="15" />
+                                </svg>
+                                <span class="upload-text">Click to upload or drag & drop</span>
+                                <span class="upload-hint">PNG, JPG up to 10MB</span>
+                            </label>
+                            <div class="preview-container" id="backPreview" style="display: none;">
+                                <img id="backPreviewImg" alt="Back preview">
+                                <button class="remove-btn" id="removeBackBtn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18" />
+                                        <line x1="6" y1="6" x2="18" y2="18" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" id="resetBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                            <path d="M3 3v5h5" />
+                        </svg>
+                        Reset All
+                    </button>
+                    <button class="btn btn-primary" id="printBtn" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 6 2 18 2 18 9" />
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                            <rect x="6" y="14" width="12" height="8" />
+                        </svg>
+                        Generate Print Layout
+                    </button>
+                </div>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="16" x2="12" y2="12" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <h3>How It Works</h3>
+                        <ol>
+                            <li>Upload the front side of your ID card</li>
+                            <li>Upload the back side of your ID card</li>
+                            <li>Click "Generate Print Layout" to create print pages</li>
+                            <li>Print using your browser's print function (Ctrl+P)</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 ID Card Print Studio. Optimized for professional printing by Rao Hamza.</p>
+        </footer>
+    </div>
+
+    <!-- Print Layout (Hidden on Screen, Visible on Print) -->
+    <div id="print-layout" class="print-layout">
+        <!-- Front Page -->
+        <div class="print-page" id="frontPage">
+            <div class="card-grid" id="frontGrid"></div>
+        </div>
+
+        <!-- Back Page -->
+        <div class="print-page" id="backPage">
+            <div class="card-grid" id="backGrid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
