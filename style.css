@@ -932,3 +932,407 @@ body {
         gap: var(--spacing-sm);
     }
 }
+
+/* ===== PDF Tools Specific Styles ===== */
+
+/* PDF List for Merger */
+.pdf-list {
+    margin: var(--spacing-lg) 0;
+}
+
+.pdf-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: move;
+    transition: all var(--transition-fast);
+}
+
+.pdf-item:hover {
+    border-color: var(--accent-purple);
+    transform: translateX(4px);
+}
+
+.pdf-item-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex: 1;
+}
+
+.pdf-item-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.pdf-item-size {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.pdf-item-remove {
+    background: rgba(245, 87, 108, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.pdf-item-remove:hover {
+    background: rgba(245, 87, 108, 1);
+    transform: scale(1.1);
+}
+
+/* PDF Info Display */
+.pdf-info,
+.file-size-info {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+    color: var(--text-secondary);
+}
+
+.pdf-info h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Options Panels */
+.splitter-options,
+.converter-options,
+.compressor-options,
+.watermark-options,
+.rotation-controls {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+}
+
+.splitter-options h3,
+.converter-options h3,
+.compressor-options h3,
+.watermark-options h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.125rem;
+}
+
+/* PDF Preview Grid */
+.pdf-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.page-thumbnail {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm);
+    text-align: center;
+    transition: all var(--transition-medium);
+    position: relative;
+}
+
+.page-thumbnail:hover {
+    border-color: var(--accent-purple);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.page-thumbnail canvas {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
+    background: white;
+}
+
+.page-thumbnail-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-thumbnail-controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+.rotation-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Option Groups */
+.option-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.option-group label {
+    display: block;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.option-group select,
+.option-group input[type="text"],
+.option-group input[type="number"],
+.option-group input[type="color"],
+.option-group input[type="file"] {
+    width: 100%;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.938rem;
+    transition: all var(--transition-fast);
+}
+
+.option-group select:focus,
+.option-group input:focus {
+    outline: none;
+    border-color: var(--accent-purple);
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.option-group input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent-purple);
+    margin-top: var(--spacing-xs);
+}
+
+.option-group span {
+    display: inline-block;
+    margin-left: var(--spacing-sm);
+    color: var(--accent-purple);
+    font-weight: 600;
+}
+
+/* Size Comparison */
+.size-comparison {
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+}
+
+.size-comparison div {
+    text-align: center;
+}
+
+.size-comparison .size-label {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.size-comparison .size-value {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.size-savings {
+    color: #4facfe;
+    font-weight: 700;
+}
+
+/* Rotate Buttons */
+.rotate-btn {
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: white;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.rotate-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-input);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin: var(--spacing-md) 0;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--primary-gradient);
+    transition: width 0.3s ease;
+    border-radius: var(--radius-sm);
+}
+
+/* Image Preview Grid (from Images to PDF tool) */
+.image-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.image-preview-item {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-medium);
+}
+
+.image-preview-item:hover {
+    border-color: var(--accent-purple);
+    transform: translateY(-2px);
+}
+
+.image-preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-preview-item .remove-btn {
+    position: absolute;
+    top: var(--spacing-xs);
+    right: var(--spacing-xs);
+}
+
+/* Watermark Position Grid */
+.position-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+}
+
+.position-btn {
+    aspect-ratio: 1;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.position-btn:hover {
+    border-color: var(--accent-purple);
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.position-btn.active {
+    background: var(--primary-gradient);
+    border-color: transparent;
+}
+
+/* Print View */
+.print-view {
+    display: none;
+}
+
+@media print {
+    .app-interface {
+        display: none !important;
+    }
+
+    .print-view {
+        display: block !important;
+    }
+
+    body {
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .print-page {
+        page-break-after: always;
+        width: 210mm;
+        height: 297mm;
+        padding: 10mm;
+        background: white;
+        position: relative;
+    }
+
+    .print-page:last-child {
+        page-break-after: auto;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 8mm;
+        height: 100%;
+    }
+
+    .card-item {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4mm;
+        overflow: hidden;
+        background: #f9f9f9;
+    }
+
+    .card-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    @page {
+        margin: 0;
+        size: A4;
+    }
+}
