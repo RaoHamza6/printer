@@ -197,6 +197,7 @@ body {
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
 }
 .upload-header {
     display: flex;
@@ -1340,4 +1341,5 @@ body {
         size: A4;
     }
 }
+
 
