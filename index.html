@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-system=1.0">
-    <meta name="description" content="Professional Document Toolkit - ID Cards and Images to PDF">
-    <title>Rao Hamza Toolkit Pro | ID Card Printer & Image to PDF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Document Toolkit - PDF Tools & Document Converter">
+    <title>Document Toolkit Pro | PDF Tools & Document Converter</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -34,9 +34,9 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <h1>Rao Hamza Toolkit Pro</h1>
+                    <h1>Document Toolkit Pro</h1>
                 </div>
-                <p class="tagline">ID Card Printer & Image to PDF Converter</p>
+                <p class="tagline">Complete PDF Toolkit & Document Converter</p>
 
                 <!-- Tool Navigation -->
                 <nav class="tool-nav">
@@ -47,7 +47,7 @@
                             <circle cx="8.5" cy="8.5" r="1.5" />
                             <path d="M21 15l-5-5L5 21" />
                         </svg>
-                        <span>ID Card Printer</span>
+                        <span>ID Card</span>
                     </button>
                     <button class="tool-nav-btn" data-tool="images-pdf">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -56,20 +56,61 @@
                             <polyline points="14 2 14 8 20 8" />
                             <line x1="16" y1="13" x2="8" y2="13" />
                             <line x1="16" y1="17" x2="8" y2="17" />
-                            <polyline points="10 9 9 9 8 9" />
                         </svg>
-                        <span>Images to PDF</span>
+                        <span>Images→PDF</span>
                     </button>
-                    <button class="tool-nav-btn" onclick="location.href='https://raohamza.vercel.app'">
+                    <button class="tool-nav-btn" data-tool="pdf-merger">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                             <polyline points="14 2 14 8 20 8" />
-                            <line x1="16" y1="13" x2="8" y2="13" />
-                            <line x1="16" y1="17" x2="8" y2="17" />
-                            <polyline points="10 9 9 9 8 9" />
+                            <path d="M12 11v6" />
+                            <path d="M9 14h6" />
                         </svg>
-                        <span>Background Remover</span>
+                        <span>PDF Merger</span>
+                    </button>
+                    <button class="tool-nav-btn" data-tool="pdf-splitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="12" y1="11" x2="12" y2="17" />
+                        </svg>
+                        <span>PDF Splitter</span>
+                    </button>
+                    <button class="tool-nav-btn" data-tool="pdf-to-images">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <circle cx="8.5" cy="8.5" r="1.5" />
+                            <path d="M21 15l-5-5L5 21" />
+                        </svg>
+                        <span>PDF→Images</span>
+                    </button>
+                    <button class="tool-nav-btn" data-tool="pdf-compressor">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        <span>Compressor</span>
+                    </button>
+                    <button class="tool-nav-btn" data-tool="pdf-rotator">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21.5 2v6h-6" />
+                            <path d="M2.5 22v-6h6" />
+                            <path d="M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
+                        </svg>
+                        <span>Rotator</span>
+                    </button>
+                    <button class="tool-nav-btn" data-tool="pdf-watermark">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                        </svg>
+                        <span>Watermark</span>
                     </button>
                 </nav>
             </div>
@@ -181,29 +222,6 @@
                         </button>
                     </div>
                 </section>
-
-                <!--Info Section -->
-                <section class="info-section">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="12" y1="16" x2="12" y2="12" />
-                                <line x1="12" y1="8" x2="12.01" y2="8" />
-                            </svg>
-                        </div>
-                        <div class="info-content">
-                            <h3>How It Works</h3>
-                            <ol>
-                                <li>Upload the front side of your ID card</li>
-                                <li>Upload the back side of your ID card</li>
-                                <li>Click "Generate Print Layout" to create print pages</li>
-                                <li>Print using your browser's print function (Ctrl+P)</li>
-                            </ol>
-                        </div>
-                    </div>
-                </section>
             </div>
 
             <!-- Tool 2: Images to PDF -->
@@ -238,6 +256,283 @@
                 </section>
             </div>
 
+            <!-- Tool 3: PDF Merger -->
+            <div id="tool-pdf-merger" class="tool-section">
+                <section class="upload-section">
+                    <h2>Merge PDF Files</h2>
+                    <p class="section-description">Upload multiple PDF files and merge them into a single document. Drag
+                        to reorder files before merging.</p>
+
+                    <div class="upload-card">
+                        <div class="upload-area" id="pdfMergerUploadArea">
+                            <input type="file" id="pdfMergerInput" accept=".pdf" multiple hidden>
+                            <label for="pdfMergerInput" class="upload-label">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" y1="3" x2="12" y2="15" />
+                                </svg>
+                                <span class="upload-text">Click to upload or drag & drop PDFs</span>
+                                <span class="upload-hint">PDF files only</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="pdfMergerList" class="pdf-list"></div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" id="clearMergerBtn">Clear All</button>
+                        <button class="btn btn-primary" id="mergePdfsBtn" disabled>Merge PDFs</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tool 4: PDF Splitter -->
+            <div id="tool-pdf-splitter" class="tool-section">
+                <section class="upload-section">
+                    <h2>Split PDF File</h2>
+                    <p class="section-description">Upload a PDF and extract specific pages or split into individual
+                        pages.</p>
+
+                    <div class="upload-card">
+                        <div class="upload-area" id="pdfSplitterUploadArea">
+                            <input type="file" id="pdfSplitterInput" accept=".pdf" hidden>
+                            <label for="pdfSplitterInput" class="upload-label">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" y1="3" x2="12" y2="15" />
+                                </svg>
+                                <span class="upload-text">Click to upload a PDF</span>
+                                <span class="upload-hint">PDF file</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="splitterOptions" class="splitter-options" style="display: none;">
+                        <div class="option-group">
+                            <label>Page Range (e.g., 1-3 or 1,3,5):</label>
+                            <input type="text" id="pageRangeInput" placeholder="1-3">
+                        </div>
+                    </div>
+
+                    <div id="pdfSplitterPreview" class="pdf-preview-grid"></div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" id="clearSplitterBtn">Clear</button>
+                        <button class="btn btn-primary" id="extractPagesBtn" disabled>Extract Pages</button>
+                        <button class="btn btn-primary" id="splitAllBtn" disabled>Split All Pages</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tool 5: PDF to Images -->
+            <div id="tool-pdf-to-images" class="tool-section">
+                <section class="upload-section">
+                    <h2>Convert PDF to Images</h2>
+                    <p class="section-description">Convert each page of your PDF into individual image files (PNG or
+                        JPG).</p>
+
+                    <div class="upload-card">
+                        <div class="upload-area" id="pdfToImagesUploadArea">
+                            <input type="file" id="pdfToImagesInput" accept=".pdf" hidden>
+                            <label for="pdfToImagesInput" class="upload-label">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" y1="3" x2="12" y2="15" />
+                                </svg>
+                                <span class="upload-text">Click to upload a PDF</span>
+                                <span class="upload-hint">PDF file</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="pdfToImagesOptions" class="converter-options" style="display: none;">
+                        <div class="option-group">
+                            <label>Format:</label>
+                            <select id="imageFormatSelect">
+                                <option value="png">PNG</option>
+                                <option value="jpeg">JPEG</option>
+                            </select>
+                        </div>
+                        <div class="option-group">
+                            <label>Quality/Scale:</label>
+                            <input type="range" id="imageQualitySlider" min="1" max="3" value="2" step="0.5">
+                            <span id="qualityValue">2x</span>
+                        </div>
+                    </div>
+
+                    <div id="pdfToImagesPreview" class="pdf-preview-grid"></div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" id="clearPdfToImagesBtn">Clear</button>
+                        <button class="btn btn-primary" id="convertToImagesBtn" disabled>Convert & Download ZIP</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tool 6: PDF Compressor -->
+            <div id="tool-pdf-compressor" class="tool-section">
+                <section class="upload-section">
+                    <h2>Compress PDF File</h2>
+                    <p class="section-description">Reduce PDF file size by optimizing images and removing unnecessary
+                        data.</p>
+
+                    <div class="upload-card">
+                        <div class="upload-area" id="pdfCompressorUploadArea">
+                            <input type="file" id="pdfCompressorInput" accept=".pdf" hidden>
+                            <label for="pdfCompressorInput" class="upload-label">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" y1="3" x2="12" y2="15" />
+                                </svg>
+                                <span class="upload-text">Click to upload a PDF</span>
+                                <span class="upload-hint">PDF file</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="compressorOptions" class="converter-options" style="display: none;">
+                        <div class="option-group">
+                            <label>Compression Level:</label>
+                            <select id="compressionLevelSelect">
+                                <option value="low">Low (Better Quality)</option>
+                                <option value="medium" selected>Medium (Balanced)</option>
+                                <option value="high">High (Smaller File)</option>
+                            </select>
+                        </div>
+                        <div id="fileSizeInfo" class="file-size-info"></div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" id="clearCompressorBtn">Clear</button>
+                        <button class="btn btn-primary" id="compressPdfBtn" disabled>Compress PDF</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tool 7: PDF Page Rotator -->
+            <div id="tool-pdf-rotator" class="tool-section">
+                <section class="upload-section">
+                    <h2>Rotate PDF Pages</h2>
+                    <p class="section-description">Rotate individual pages or all pages in your PDF document.</p>
+
+                    <div class="upload-card">
+                        <div class="upload-area" id="pdfRotatorUploadArea">
+                            <input type="file" id="pdfRotatorInput" accept=".pdf" hidden>
+                            <label for="pdfRotatorInput" class="upload-label">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" y1="3" x2="12" y2="15" />
+                                </svg>
+                                <span class="upload-text">Click to upload a PDF</span>
+                                <span class="upload-hint">PDF file</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="rotatorControls" class="rotation-controls" style="display: none;">
+                        <div class="rotation-buttons">
+                            <button class="btn btn-secondary" id="rotateAllLeft">↺ All -90°</button>
+                            <button class="btn btn-secondary" id="rotateAllRight">↻ All +90°</button>
+                        </div>
+                    </div>
+
+                    <div id="pdfRotatorPreview" class="pdf-preview-grid"></div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" id="clearRotatorBtn">Clear</button>
+                        <button class="btn btn-primary" id="saveRotatedPdfBtn" disabled>Save Rotated PDF</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tool 8: PDF Watermark -->
+            <div id="tool-pdf-watermark" class="tool-section">
+                <section class="upload-section">
+                    <h2>Add Watermark to PDF</h2>
+                    <p class="section-description">Add text or image watermarks to your PDF document.</p>
+
+                    <div class="upload-card">
+                        <div class="upload-area" id="pdfWatermarkUploadArea">
+                            <input type="file" id="pdfWatermarkInput" accept=".pdf" hidden>
+                            <label for="pdfWatermarkInput" class="upload-label">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" y1="3" x2="12" y2="15" />
+                                </svg>
+                                <span class="upload-text">Click to upload a PDF</span>
+                                <span class="upload-hint">PDF file</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="watermarkOptions" class="watermark-options" style="display: none;">
+                        <div class="option-group">
+                            <label>Watermark Type:</label>
+                            <select id="watermarkTypeSelect">
+                                <option value="text">Text</option>
+                                <option value="image">Image</option>
+                            </select>
+                        </div>
+
+                        <div id="textWatermarkOptions">
+                            <div class="option-group">
+                                <label>Text:</label>
+                                <input type="text" id="watermarkText" placeholder="Enter watermark text">
+                            </div>
+                            <div class="option-group">
+                                <label>Font Size:</label>
+                                <input type="number" id="watermarkFontSize" value="48" min="12" max="120">
+                            </div>
+                            <div class="option-group">
+                                <label>Color:</label>
+                                <input type="color" id="watermarkColor" value="#ff0000">
+                            </div>
+                        </div>
+
+                        <div id="imageWatermarkOptions" style="display: none;">
+                            <div class="option-group">
+                                <label>Watermark Image:</label>
+                                <input type="file" id="watermarkImageInput" accept="image/*">
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Position:</label>
+                            <select id="watermarkPosition">
+                                <option value="center">Center</option>
+                                <option value="top-left">Top Left</option>
+                                <option value="top-right">Top Right</option>
+                                <option value="bottom-left">Bottom Left</option>
+                                <option value="bottom-right">Bottom Right</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Opacity:</label>
+                            <input type="range" id="watermarkOpacity" min="0.1" max="1" value="0.5" step="0.1">
+                            <span id="opacityValue">0.5</span>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" id="clearWatermarkBtn">Clear</button>
+                        <button class="btn btn-primary" id="applyWatermarkBtn" disabled>Apply Watermark</button>
+                    </div>
+                </section>
+            </div>
+
         </main>
     </div>
 
@@ -253,11 +548,12 @@
 
     <!-- PDF Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
     <!-- Main Script -->
     <script src="script.js"></script>
 </body>
 
-
 </html>
-
