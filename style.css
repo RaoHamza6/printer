@@ -193,7 +193,11 @@ body {
     position: relative;
     z-index: 1;
 }
-
+.footer-id {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Times New Roman', Times, serif;
+}
 .upload-header {
     display: flex;
     align-items: center;
@@ -1336,3 +1340,4 @@ body {
         size: A4;
     }
 }
+
